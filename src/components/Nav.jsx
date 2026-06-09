@@ -7,6 +7,11 @@ import {
 
 export default function AppShell({ children }) {
 
+  const navItems = [
+    { label: <Github />, href: "https://github.com/fikadualemu" },
+    { label: <Linkedin />, href: "https://linkedin.com/in/fikadualemu" },
+  ];
+
   return (
     <div className="sticky top-0 z-50 overflow-x-hidden  text-ink">
       <div className="relative mx-auto flex  max-w-6xl flex-col px-4 pb-10 sm:px-6 lg:px-8">
@@ -23,7 +28,7 @@ export default function AppShell({ children }) {
 
               <div className="flex items-center gap-2">
                {[Github, Linkedin].map((Icon, i) => (
-                  <a key={i} href="#"
+                  <a key={i} href={navItems[i].href}
                     className="w-10 h-10 rounded-xl flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-400 transition-all">
                     <Icon size={20} />
                   </a>
