@@ -497,7 +497,7 @@ function Hero() {
               className="font-black leading-[0.92] mb-6"
               style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(3.2rem,8vw,6.5rem)" }}
             >
-              <span className="block text-gray-700">Full-Stack</span>
+              <span className="block text-gray-700">Software</span>
               <span className="block" style={{
                 color:"#B58C3D ",
                 
