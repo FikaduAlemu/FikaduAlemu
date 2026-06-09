@@ -13,7 +13,7 @@ import {
 import sabbathschool from "../assets/images/sabbathschool.png";
 import youcare from "../assets/images/youcare.png";
 import profilepic from "../assets/images/fikadu.jpeg";
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo.png";
 import html from "../assets/images/html.png";
 import css from "../assets/images/css.png";
 import js from "../assets/images/js.png";
@@ -31,8 +31,6 @@ import typescript from "../assets/images/typescript.png";
 import vercel from "../assets/images/vercel.png";
 import vs from "../assets/images/vs.png";
 import express from "../assets/images/express.png";
-
-
 
 function createProjectImage({ title, from, to, glow, panel }) {
   const svg = `
@@ -61,69 +59,11 @@ function createProjectImage({ title, from, to, glow, panel }) {
       <text x="188" y="588" fill="#fffaf2" font-size="64" font-weight="700" font-family="Arial, sans-serif">${title}</text>
     </svg>
   `;
-
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
-function createProfilePhoto({ name, initials, from, to }) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" fill="none">
-      <defs>
-        <linearGradient id="portraitBg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="${from}" />
-          <stop offset="100%" stop-color="${to}" />
-        </linearGradient>
-        <radialGradient id="portraitGlow" cx="0.32" cy="0.14" r="1">
-          <stop offset="0%" stop-color="#fff7ef" stop-opacity="0.96" />
-          <stop offset="100%" stop-color="#fff7ef" stop-opacity="0" />
-        </radialGradient>
-      </defs>
-      <rect width="900" height="900" rx="64" fill="url(#portraitBg)" />
-      <rect width="900" height="900" rx="64" fill="#171312" fill-opacity="0.22" />
-      <circle cx="270" cy="150" r="280" fill="url(#portraitGlow)" />
-      <g opacity="0.98">
-        <circle cx="450" cy="340" r="148" fill="#f2c7a4" />
-        <path d="M282 378c20-132 96-228 168-228s147 96 168 228c-46-30-111-50-168-50s-122 20-168 50Z" fill="#241917" />
-        <path d="M218 710c36-166 127-248 232-248s196 82 232 248v78H218v-78Z" fill="#1b2330" />
-        <rect x="164" y="650" width="572" height="160" rx="40" fill="#fff9f1" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.22" />
-      </g>
-      <text x="120" y="718" fill="#fff9f1" font-size="64" font-weight="700" font-family="Arial, sans-serif">${name}</text>
-      <text x="120" y="774" fill="#fff9f1" fill-opacity="0.75" font-size="24" font-family="Arial, sans-serif" letter-spacing="6">FULL-STACK DEVELOPER</text>
-      <circle cx="734" cy="164" r="86" fill="#fff9f1" fill-opacity="0.16" />
-      <text x="682" y="184" fill="#fff9f1" font-size="56" font-weight="700" font-family="Arial, sans-serif">${initials}</text>
-    </svg>
-  `;
-
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
-function createTechIcon({ label, short, bg, fg = "#ffffff" }) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
-      <rect width="96" height="96" rx="24" fill="${bg}" />
-      <text
-        x="48"
-        y="56"
-        text-anchor="middle"
-        fill="${fg}"
-        font-size="28"
-        font-weight="700"
-        font-family="Arial, sans-serif"
-      >
-        ${short}
-      </text>
-      <title>${label}</title>
-    </svg>
-  `;
-
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
 export const profile = {
-  firstName: "Fikadu",
-  lastName: "Alemu",
   name: "File.dev",
-  // photos:logo,
   tagname: "Fikadu Alemu",
   role: "Full-Stack Developer",
   tagline: "Building digital experiences that matter.",
@@ -133,23 +73,18 @@ export const profile = {
     "I'm a full-stack developer who enjoys turning ideas into polished and responsive products.",
     "My approach combines strong frontend craftsmanship with backend logic that is readable, maintainable, and ready for real-world use.",
   ],
-  note:
-    "Clean structure, smooth interaction, and strong fundamentals are the pieces I try to bring into every project.",
+  note: "Clean structure, smooth interaction, and strong fundamentals are the pieces I try to bring into every project.",
   location: "Open to remote work",
   email: "fikadualemutatty@gmail.com",
-  linkedin:"https://www.linkedin.com/in/fikadualemu",
-  github:"https://www.github.com/fikadualemu",
+  linkedin: "https://www.linkedin.com/in/fikadualemu",
+  github: "https://www.github.com/fikadualemu",
   photo: profilepic,
-  photos:logo,
+  photos: logo,
   photoAlt: "Profile portrait for Fikadu Alemu",
-  
   cta: {
     primary: "#projects",
     secondary: "#contact",
   },
-
-
-  
   codeSnippet: [
     "const developer = {",
     "  name: 'Fikadu Alemu',",
@@ -159,35 +94,6 @@ export const profile = {
     "};",
   ],
 };
-
-// export const profiles ={
-//   constt:"const",
-//   developerr:"developer",
-//   equall:"=",
-//   namee:"name:",
-//   nameee:"Fikadu Alemu",
-//   rolee:"role:",
-//   roleee:"Full-Stack Developer",
-//   focus:"focus:",
-//   nameee:"Building cool staff",
-//   learningg:"learning:",
-//   learninggg:"MERN",
-//   opentag:"[",
-//   closetag:"]"
-// },
-
-
-// export const myprofile =[
-//   {
-//     conss:"const",
-//     devrloperr:"",
-//     name:"name",
-//     fikadu:"Fikadu Alemu",
-//     role:"role",
-//     roles:"Full-Stack Developer"
-
-//   }
-// ]
 
 export const focusAreas = [
   {
@@ -221,8 +127,8 @@ export const projects = [
     year: "2026",
     description:
       "A modern productivity dashboard designed around clean workflows, responsive layouts, and fast task tracking.",
-    stack: ["React Native", "Nativewind","Expo","Typescript"],
-    image: sabbathschool
+    stack: ["React Native", "Nativewind", "Expo", "TypeScript"],
+    image: sabbathschool,
   },
   {
     title: "Youcare",
@@ -232,24 +138,7 @@ export const projects = [
       "An e-commerce concept focused on strong product presentation, clean filtering, and a premium customer journey.",
     stack: ["React", "Express", "MongoDB", "Stripe"],
     image: youcare,
-    imageAlt: "Luna Gabbage preview",
-    href: "#contact",
-  },
-  {
-    title: "Youcare",
-    eyebrow: "Full-stack",
-    year: "2025",
-    description:
-      "A collaborative task manager for teams that need simple planning, clear priorities, and smooth user flow.",
-    stack: ["React", "Supabase", "Tailwind", "Realtime"],
-    image: createProjectImage({
-      title: "Youcare",
-      from: "#fcd34d",
-      to: "#f97316",
-      glow: "#fff7cc",
-      panel: "#261813",
-    }),
-    imageAlt: "Taskify preview",
+    imageAlt: "Youcare preview",
     href: "#contact",
   },
   {
@@ -293,34 +182,34 @@ export const techGroups = [
     title: "Frontend",
     icon: Globe,
     items: [
-      { name: "HTML", level: 95, icon: html},
-      { name: "React", level: 90, icon: react},
+      { name: "HTML", level: 95, icon: html },
+      { name: "React", level: 90, icon: react },
       { name: "Next.js", level: 78, icon: next },
-      { name: "Css", level: 92, icon: css },
+      { name: "CSS", level: 92, icon: css },
       { name: "JavaScript", level: 92, icon: js },
-      { name: "TypeScript", level: 76, icon: typescript},
-      { name: "Tailwind CSS", level: 94, icon: tailwindcss},
-      { name: "Framer Motion", level: 94, icon: framermotion},
+      { name: "TypeScript", level: 76, icon: typescript },
+      { name: "Tailwind CSS", level: 94, icon: tailwindcss },
+      { name: "Framer Motion", level: 94, icon: framermotion },
     ],
   },
   {
     title: "Backend",
     icon: Server,
     items: [
-      { name: "Node.js", level: 84, icon: node},
-      { name: "Express", level: 80, icon: express},
-      { name: "MongoDB", level: 76, icon:mongo},
-      { name: "Supabase", level: 70, icon: supabase},
+      { name: "Node.js", level: 84, icon: node },
+      { name: "Express", level: 80, icon: express },
+      { name: "MongoDB", level: 76, icon: mongo },
+      { name: "Supabase", level: 70, icon: supabase },
     ],
   },
   {
     title: "Tools & Platforms",
     icon: Wrench,
     items: [
-      { name: "Git ", level: 88, icon: git},
-      { name: " GitHub", level: 88, icon: github},
-      { name: "Vercel", level: 78, icon: vercel},
-      { name: "VS Code", level: 95, icon: vs},
+      { name: "Git", level: 88, icon: git },
+      { name: "GitHub", level: 88, icon: github },
+      { name: "Vercel", level: 78, icon: vercel },
+      { name: "VS Code", level: 95, icon: vs },
     ],
   },
 ];
@@ -329,14 +218,14 @@ export const stats = [
   { value: "3+", label: "Projects Built" },
   { value: "4+", label: "Years Learning" },
   { value: "15+", label: "Technologies" },
-  { value: "8", label: "Curiosity" },
+  { value: "8+", label: "Curiosity" },
 ];
 
 export const contactCards = [
   {
     title: "Email",
     value: profile.email,
-    note: "Replace this placeholder with your real email when you're ready.",
+    note: "Available for freelance and full-time opportunities.",
     icon: Mail,
   },
   {
