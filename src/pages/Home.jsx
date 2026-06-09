@@ -980,15 +980,22 @@ function Contact() {
         <div className="flex justify-center">
           <div className="w-full max-w-3xl flex flex-wrap justify-center gap-5">
             {[
-              { icon: Mail,    label:"Email",    val:"fikadualemutatty@gmail.com",      c:"#22d3ee" },
-              { icon: Phone,   label:"Phone",    val:"+251 (934) 080-766",     c:"#a855f7" },
-              { icon: MapPin,  label:"Location", val:"Hawassa, Ethiopia",     c:"#38bdf8" },
-              { icon: Globe,   label:"Website",  val:"comming soon",        c:"#f59e0b" },
-            ].map(({ icon: Icon, label, val, c }) => (
-              <div
+              { icon: Mail,    label:"Email",    val:"fikadualemutatty@gmail.com",   href:"mailto:fikadualemutatty@gmail.com",   c:"#22d3ee" },
+              { icon: Phone,   label:"Phone",    val:"+251 (934) 080-766",     href:"tel:+251934080766",     c:"#a855f7"  },
+              { icon: MapPin,  label:"Location", val:"Hawassa, Ethiopia",     href:"https://maps.google.com/?q=Hawassa,+Ethiopia",     c:"#38bdf8" },
+              { icon: Globe,   label:"Website",  val:"comming soon",        href:"https://fikadualemu.vercel.app/",        c:"#f59e0b" },
+            ].map(({ icon: Icon, label, val, href, c }) => (
+              <a
                 key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel="noreferrer"
                 className="w-full sm:w-1/2 md:w-1/3 flex items-center gap-4 p-4 rounded-2xl border group cursor-default hover:border-black/20 transition-all"
                 style={{ background:"#f3f4f6", borderColor:"rgba(0,0,0,0.1)" }}
+              >
+                 <div className="flex items-center gap-3"
+                key={label}
+                
               >
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: c + "18" }}>
                   <Icon size={16} style={{ color: c }} />
@@ -998,6 +1005,8 @@ function Contact() {
                   <p className="text-sm text-slate-700 font-medium">{val}</p>
                 </div>
               </div>
+              </a>
+             
             ))}
           </div>
         </div>
